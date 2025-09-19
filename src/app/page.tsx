@@ -8,8 +8,8 @@ import Title from "../components/Main/Title";
 export default function HomePage() {
   return (
     <div className={styles.wrapper}>
-      <Title />     
       <SphereVideo />  
+      <Title />     
       <InputArea />  
       <Buttons />   
     </div>

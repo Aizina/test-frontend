@@ -1,4 +1,3 @@
-// components/Main/Title.tsx
 import styles from "./Title.module.css";
 import { fetchDefaultUser } from "@/api/fetchUser";
 
