@@ -1,0 +1,71 @@
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.primary {
+  width: 150px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 10px;
+  color: #ABB7C9;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: #1F242B66;
+  position: relative;
+  z-index: 0;
+  font-size: 12px;
+}
+
+.primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  padding: 1px;
+  background: linear-gradient(227.41deg, #BC82F3 17%, #F5B9EA 48%, #8D99FF 77%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.primary:hover {
+  background: linear-gradient(227.41deg, #BC82F3 17%, #F5B9EA 48%, #8D99FF 77%);
+  color: black;
+}
+
+.primary:hover .icon {
+  filter: brightness(0) saturate(100%);
+}
+
+.secondary {
+  padding: 8px 16px;
+  background-color: #1F242B66;
+  color: #ABB7C9;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #2C333C;
+  height: 36px;
+  font-size: 12px;
+}
+
+.secondary:hover {
+  background-color: #2C333C;
+  color: white;
+}
+
+@media (max-width: 982px) {
+  .buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+}

@@ -1,0 +1,27 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(50% 50% at 50% 50%, #040423 0%, #02040E 100%);
+}
+
+.main {
+  flex: 1;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .main {
+    margin-top: 60px;
+    width: 100%;
+  }
+}
