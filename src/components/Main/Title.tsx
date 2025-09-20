@@ -1,14 +1,16 @@
+"use client";
+import { useEffect, useState } from "react";
 import styles from "./Title.module.css";
 import { fetchDefaultUser } from "@/api/fetchUser";
 
-const Title = async () => {
-  const user = await fetchDefaultUser();
+export default function Title() {
+  const [name, setName] = useState("User");
 
-  return (
-    <h1 className={styles.title}>
-      Welcome Back, {user?.name ?? "Default User"}!
-    </h1>
-  );
-};
+  useEffect(() => {
+    fetchDefaultUser().then((user) => {
+      if (user?.name) setName(user.name);
+    });
+  }, []);
 
-export default Title;
+  return <h1 className={styles.title}>Welcome Back, {name}!</h1>;
+}

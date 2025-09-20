@@ -27,7 +27,7 @@ const Header = ({ collapsed, setCollapsed, projects }: HeaderProps) => {
         height={24}
       />
 
-      {!collapsed && (
+      {collapsed && (
         <div className={styles.headerDropdown}>
           <button
             className={styles.headerDropdownButton}

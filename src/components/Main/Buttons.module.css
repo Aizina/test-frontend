@@ -21,6 +21,7 @@
   position: relative;
   z-index: 0;
   font-size: 12px;
+  cursor: pointer;
 }
 
 .primary::before {
@@ -30,6 +31,7 @@
   border-radius: 8px;
   padding: 1px;
   background: linear-gradient(227.41deg, #BC82F3 17%, #F5B9EA 48%, #8D99FF 77%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;

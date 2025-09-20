@@ -30,14 +30,14 @@ const Sidebar = () => {
   }, [])
 
   return (
-    <div className={`${styles.sidebar} ${collapsed ? styles.collapsed : ""}`}>
+    <div className={`${styles.sidebar} ${collapsed ? "" :styles.collapsed}`}>
       <Header
         collapsed={collapsed}
         setCollapsed={setCollapsed}
         projects={user.projects}
       />
       <Divider />
-      {!collapsed && (
+      {collapsed && (
         <>
           <NavMenu />
           <Divider />
